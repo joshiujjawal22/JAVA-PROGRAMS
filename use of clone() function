@@ -1,0 +1,14 @@
+/*
+This is how cloning is done in java.We can easily make a clone of array in java by using clone() function.
+In 1-d array it is called deep copy while in 2-d array it is called Shallow copy.
+*/
+public class Main
+{
+	public static void main(String[] args) {
+		int a[]={1,2,3,4};
+		int b[]=a.clone(); //deep copy(In 1-d array)
+		int c[][]={{1,2,3},{4,5,6}};
+		int d[][]=c.clone(); //shallow copy(in 2-d array)
+		 System.out.println(d[1][1]);
+	}
+}
