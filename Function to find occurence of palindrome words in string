@@ -1,0 +1,15 @@
+static int countPalindrome(String str)
+{
+  str=str.toLowerCase();
+  int c=0,i,j;
+  String s[]=str.split(" ");
+  for(i=0;i<s.length;i++)
+  {
+    String rev="";
+    for(j=s[i].length()-1;j>=0;j--) rev+=s[i].charAt(j);
+    
+    if(rev.equals(s[i])) c++;
+  }
+  return c;
+
+}
