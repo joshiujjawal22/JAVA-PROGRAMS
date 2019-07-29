@@ -1,0 +1,59 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	 	Scanner sc = new Scanner(System.in);
+		 
+		 int i,k=0,j,t;
+		 int as=sc.nextInt();
+		 int a[]=new int[as];
+		 for(i=0;i<as;i++)
+		  { 
+		      a[i]=sc.nextInt();
+		  }
+		 int bs=sc.nextInt();
+		  int b[]=new int[bs];
+		   for(i=0;i<bs;i++)
+  {
+      b[i]=sc.nextInt();
+  }
+		  
+		 int ss=as+bs;
+		 
+		
+		 int c[]=new int[ss];
+		 
+		  
+		 
+		  
+		  for(i=0;i<as;i++)
+		  { 
+    c[k]=a[i];
+    k++;}
+    
+  for(i=0;i<bs;i++)
+  {
+    c[k]=b[i];
+    k++;}
+ 
+
+ 
+  
+  for(i=0;i<k-1;i++)
+  {
+    for(j=0;j<k-1;j++)
+    {
+      if(c[j]>c[j+1])
+      {
+        t=c[j];
+        c[j]=c[j+1];
+        c[j+1]=t;
+      }
+    }
+  }
+  for(i=0;i<k;i++)
+  {
+      System.out.println(c[i]);
+  }
+}
+}
