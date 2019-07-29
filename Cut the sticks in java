@@ -1,0 +1,41 @@
+public class Main
+{
+	public static void main(String[] args) {
+		 int i,j,s,c,k=0,l=8;
+		 int res[]=new int[90];
+		 int lengths[]={1,2,3,4,3,3,2,1};
+		 int n=0;
+  for(j=0;j<l;j++)
+  {
+    s=7685;
+    for(i=0;i<l;i++)
+    {
+      if(lengths[i]<s && lengths[i]!=0)
+        s=lengths[i];      
+    }
+    c=0;
+    for(i=0;i<l;i++)
+    {
+      if(lengths[i]!=0)
+      {
+        lengths[i] -=s;
+        c++;
+      }  
+    }
+    res[k]=c;
+    k++;
+    n=0;
+    for(i=0;i<l;i++)
+    {
+      if(lengths[i]==0)
+        n++;
+    }
+    if(n==l)
+      break;
+  }
+  for(i=0;i<k;i++)
+  {
+   System.out.println(res[i]);
+  }
+	}
+}
