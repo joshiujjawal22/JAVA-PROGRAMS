@@ -1,15 +1,19 @@
+import java.util.Scanner;
 public class Main
 {
 	public static void main(String[] args) {
-		 int i,j,s,c,k=0,l=8;
+	 	Scanner sc = new Scanner();
+		 int i,j,s,c,k=0;
+		 int l =  sc.nextInt();
 		 int res[]=new int[90];
-		 int lengths[]={1,2,3,4,3,3,2,1};
+		 int lengths[]=new int[l];
 		 int n=0;
-  for(j=0;j<l;j++)
+ for(i=0;i<l;i++) lengths[i]=sc.nextInt();
+ for(j=0;j<l;j++)
   {
     s=7685;
     for(i=0;i<l;i++)
-    {
+    { 
       if(lengths[i]<s && lengths[i]!=0)
         s=lengths[i];      
     }
